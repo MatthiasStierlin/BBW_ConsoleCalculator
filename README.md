@@ -1,2 +1,4 @@
 # BBW_ConsoleCalculator
-This repository a for educational purpose. It is also a school project that well get a mark.
+This repository is for educational purpose. It is also a school project that will get a mark.
+
+Old repository: https://github.com/MatthiasStierlin/ConsoleCalculatorWithMaven-BBW .
