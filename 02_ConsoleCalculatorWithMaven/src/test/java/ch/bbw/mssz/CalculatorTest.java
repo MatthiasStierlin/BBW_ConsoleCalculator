@@ -22,4 +22,9 @@ class CalculatorTest {
     void sumAssertion() {
         assertEquals(30,calculator.sum(10,20));
     }
+
+    @Test
+    void subtractAssertion() {
+        assertEquals(20,calculator.subtract(30,10));
+    }
 }
