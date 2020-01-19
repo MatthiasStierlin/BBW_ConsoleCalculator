@@ -1,8 +1,8 @@
 package ch.bbw.mssz;
 
 /**
- * Hello world!
- *
+ * @author Matthias_Stierlin
+ * @version 19.01.2020
  */
 public class App 
 {
