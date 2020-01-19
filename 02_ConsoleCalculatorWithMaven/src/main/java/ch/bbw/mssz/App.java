@@ -19,6 +19,11 @@ public class App
         valueA = 10;
         valueB = 20;
 
-        System.out.println("Summe " + valueA + " + " + valueB + " = " + calculator.sum(valueA,valueB));
+        System.out.println("Sum " + valueA + " + " + valueB + " = " + calculator.sum(valueA,valueB));
+
+        valueA = 30;
+        valueB = 10;
+
+        System.out.println("Subtract " + valueA + " - " + valueB + " = " + calculator.subtract(valueA,valueB));
     }
 }
