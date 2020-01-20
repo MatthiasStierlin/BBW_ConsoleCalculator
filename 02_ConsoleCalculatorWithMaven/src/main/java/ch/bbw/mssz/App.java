@@ -30,5 +30,9 @@ public class App
         System.out.println();
 
         System.out.println("Divide: " + valueA + " / " + valueB + " = " + calculator.division(valueA,valueB));
+
+        System.out.println();
+
+        System.out.println("Multiply: " + valueA + " * " + valueB + " = " + calculator.multiplikation(valueA,valueB));
     }
 }

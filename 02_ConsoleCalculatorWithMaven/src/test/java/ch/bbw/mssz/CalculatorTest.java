@@ -60,5 +60,24 @@ class CalculatorTest {
         assertEquals("/ by zero", exception.getMessage());
     }
 
+    /**
+     * This test, tests a protected method.
+     */
+    @Test
+    void testMultiplikationWithPositiveNumbersPass() {
+        assertEquals(300,calculator.multiplikation(10,30));
+    }
 
+    /**
+     * This test, tests a method with default visibility.
+     */
+    @Test
+    void testStringZinsenPass() {
+        assertEquals("1459,98", calculator.interest(1200,4,5));
+    }
+
+    /**
+     * Private methods can't be tested without injecting reflection with Dp4j
+     * into the test methods.
+     */
 }
