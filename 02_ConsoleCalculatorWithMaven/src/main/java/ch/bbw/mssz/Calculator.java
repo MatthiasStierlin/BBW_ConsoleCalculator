@@ -17,4 +17,8 @@ public class Calculator {
     public int division(int dividend1, int dividend2) {
         return dividend1 / dividend2;
     };
+
+    protected int multiplikation(int multiplier1, int multiplier2) {
+        return multiplier1 * multiplier2;
+    }
 }
