@@ -47,4 +47,10 @@ class CalculatorTest {
     void testSubtractTwoNegativeNumbersPass() {
         assertEquals(-20, calculator.subtract(-30,-10));
     }
+
+    @Test
+    void testDivisionWithZero() {
+        Exception exception = assertThrows(ArithmeticException.class, () -> calculator.division(18,0));
+        assertEquals("/ by zero", exception.getMessage());
+    }
 }
