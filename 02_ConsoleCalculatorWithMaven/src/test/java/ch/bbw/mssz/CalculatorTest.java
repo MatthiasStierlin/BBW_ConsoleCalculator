@@ -1,6 +1,7 @@
 package ch.bbw.mssz;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 import java.lang.management.MonitorInfo;
@@ -20,7 +21,6 @@ class CalculatorTest {
         calculator = new Calculator();
     }
 
-    //Calculator.sum
     @Test
     void testSumTwoPositiveNumbersPass() {
         assertEquals(30,calculator.sum(10,20));
@@ -66,7 +66,6 @@ class CalculatorTest {
         assertEquals(-30,calculator.sum(-10,-20));
     }
 
-    //Calculator.subtract
     @Test
     void testSubtractTwoPositiveNumbersPass() {
         assertEquals(20,calculator.subtract(30,10));
@@ -112,7 +111,6 @@ class CalculatorTest {
         assertEquals(-20, calculator.subtract(-30,-10));
     }
 
-    //Calculator.division
     @Test
     void testDivisionWithZeroPass() {
         Exception exception = assertThrows(ArithmeticException.class, () -> calculator.division(18,0));
@@ -125,7 +123,41 @@ class CalculatorTest {
         assertEquals("/ by zero", exception.getMessage());
     }
 
-    //Extra
+    @Test
+    void testDivisionTwoPositiveNumbersPass() {
+        assertEquals(10,calculator.division(100,10));
+    }
+
+    @Test
+    void testDivisionOnePositiveAndNegativeNumberPass() {
+        assertEquals(-10,calculator.division(100,-10));
+    }
+
+    @Test
+    void testDivisionTwoNegativeNumbersPass() {
+        assertEquals(10,calculator.division(-100,-10));
+    }
+
+    @Test
+    void testDivisionOnePositiveNumberAndMaxValuePass() {
+        assertEquals(214748364,calculator.division(Integer.MAX_VALUE,10));
+    }
+
+    @Test
+    void testDivisionOneNegativeNumberAndMaxValuePass() {
+        assertEquals(-214748364,calculator.division(Integer.MAX_VALUE,-10));
+    }
+
+    @Test
+    void testDivisionOnePositiveNumberAndMinValuePass() {
+        assertEquals(-214748364,calculator.division(Integer.MIN_VALUE,10));
+    }
+
+    @Test
+    void testDivisionOneNegativeNumberAndMinValuePass() {
+        assertEquals(214748364,calculator.division(Integer.MIN_VALUE,-10));
+    }
+
     /**
      * This test, tests a protected method.
      */
