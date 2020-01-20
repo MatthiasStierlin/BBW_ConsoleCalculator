@@ -73,7 +73,11 @@ class CalculatorTest {
      */
     @Test
     void testStringZinsenPass() {
-        assertEquals("1459,98", calculator.zinsen(1200,4,5));
+        assertEquals("1459,98", calculator.interest(1200,4,5));
     }
 
+    /**
+     * Private methods can't be tested without injecting reflection with Dp4j
+     * into the test methods.
+     */
 }
