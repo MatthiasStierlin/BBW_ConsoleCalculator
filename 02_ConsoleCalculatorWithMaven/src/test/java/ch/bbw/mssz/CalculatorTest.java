@@ -175,6 +175,14 @@ class CalculatorTest {
     }
 
     /**
+     * Just because a test passes once, that doesnt mean that it always pass.
+     */
+    @RepeatedTest(10)
+    void testStringZinsenTenTimesPass() {
+        assertEquals("1459,98", calculator.interest(1200,4,5));
+    }
+
+    /**
      * Private methods can't be tested without injecting reflection with Dp4j
      * into the test methods.
      */
