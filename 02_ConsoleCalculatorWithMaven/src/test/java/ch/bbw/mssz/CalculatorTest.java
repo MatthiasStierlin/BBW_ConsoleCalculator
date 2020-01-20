@@ -1,20 +1,20 @@
 package ch.bbw.mssz;
 
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author Matthias_Stierlin
- * @version 19.01.2020
+ * @version 20.01.2020
  */
 class CalculatorTest {
 
-    private static Calculator calculator;
+    private Calculator calculator;
 
-    @BeforeAll
-    static void setUp() {
+    @BeforeEach
+    void setUp() {
         calculator = new Calculator();
     }
 
