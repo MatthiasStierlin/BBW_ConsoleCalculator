@@ -49,8 +49,16 @@ class CalculatorTest {
     }
 
     @Test
-    void testDivisionWithZero() {
+    void testDivisionWithZeroPass() {
         Exception exception = assertThrows(ArithmeticException.class, () -> calculator.division(18,0));
         assertEquals("/ by zero", exception.getMessage());
     }
+
+    @Test
+    void testDivisionWithNegativeBNumberAndZeroPass() {
+        Exception exception = assertThrows(ArithmeticException.class, () -> calculator.division(-18,0));
+        assertEquals("/ by zero", exception.getMessage());
+    }
+
+
 }
