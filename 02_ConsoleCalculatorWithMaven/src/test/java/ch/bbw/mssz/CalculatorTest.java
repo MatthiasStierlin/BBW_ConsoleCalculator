@@ -68,4 +68,12 @@ class CalculatorTest {
         assertEquals(300,calculator.multiplikation(10,30));
     }
 
+    /**
+     * This test, tests a method with default visibility.
+     */
+    @Test
+    void testStringZinsenPass() {
+        assertEquals("1459,98", calculator.zinsen(1200,4,5));
+    }
+
 }
