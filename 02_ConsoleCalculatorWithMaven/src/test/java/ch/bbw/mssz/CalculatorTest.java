@@ -60,5 +60,12 @@ class CalculatorTest {
         assertEquals("/ by zero", exception.getMessage());
     }
 
+    /**
+     * This test, tests a protected method.
+     */
+    @Test
+    void testMultiplikationWithPositiveNumbersPass() {
+        assertEquals(300,calculator.multiplikation(10,30));
+    }
 
 }
