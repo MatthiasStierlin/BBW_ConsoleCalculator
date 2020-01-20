@@ -34,7 +34,12 @@ class CalculatorTest {
     }
 
     @Test
-    void subtractAssertion() {
+    void testSubtractTwoPositiveNumbersPass() {
         assertEquals(20,calculator.subtract(30,10));
+    }
+
+    @Test
+    void testSubtractOneNegativeAndOnePositiveNumberPass() {
+        assertEquals(30,calculator.subtract(20,-10));
     }
 }
