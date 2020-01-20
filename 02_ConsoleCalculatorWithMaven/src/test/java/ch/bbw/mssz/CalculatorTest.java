@@ -19,8 +19,13 @@ class CalculatorTest {
     }
 
     @Test
-    void sumAssertion() {
+    void testSumTwoPositiveNumbersPass() {
         assertEquals(30,calculator.sum(10,20));
+    }
+
+    @Test
+    void testSumOneNegativeAndOnePositiveNumberPass(){
+        assertEquals(20,calculator.sum(30,-10));
     }
 
     @Test
