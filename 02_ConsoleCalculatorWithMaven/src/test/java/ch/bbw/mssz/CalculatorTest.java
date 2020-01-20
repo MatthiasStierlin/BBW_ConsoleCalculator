@@ -18,6 +18,7 @@ class CalculatorTest {
         calculator = new Calculator();
     }
 
+    //Calculator.sum
     @Test
     void testSumTwoPositiveNumbersPass() {
         assertEquals(30,calculator.sum(10,20));
@@ -29,10 +30,41 @@ class CalculatorTest {
     }
 
     @Test
+    void testSumOnePositiveNumberAndZeroPass() {
+        assertEquals(18, calculator.sum(18, 0));
+    }
+
+    @Test
+    void testSumMaxValueAndMinValuePass() {
+        assertEquals(-1,calculator.sum(Integer.MAX_VALUE,Integer.MIN_VALUE));
+    }
+
+    @Test
+    void testSumMaxValueAndPositiveNumberPass() {
+        assertEquals(-2147483631,calculator.sum(Integer.MAX_VALUE,18));
+    }
+
+    @Test
+    void testSumMaxValueAndNegativeNumberPass() {
+        assertEquals(2147483629,calculator.sum(Integer.MAX_VALUE,-18));
+    }
+
+    @Test
+    void testSumMinValueAndPositiveNumberPass() {
+        assertEquals(-2147483630,calculator.sum(Integer.MIN_VALUE,18));
+    }
+
+    @Test
+    void testSumMinValueAndNegativeNumberPass() {
+        assertEquals(2147483630,calculator.sum(Integer.MIN_VALUE,-18));
+    }
+
+    @Test
     void testSumTwoNegativeNumbersPass() {
         assertEquals(-30,calculator.sum(-10,-20));
     }
 
+    //Calculator.subtract
     @Test
     void testSubtractTwoPositiveNumbersPass() {
         assertEquals(20,calculator.subtract(30,10));
@@ -48,6 +80,7 @@ class CalculatorTest {
         assertEquals(-20, calculator.subtract(-30,-10));
     }
 
+    //Calculator.division
     @Test
     void testDivisionWithZeroPass() {
         Exception exception = assertThrows(ArithmeticException.class, () -> calculator.division(18,0));
@@ -60,6 +93,7 @@ class CalculatorTest {
         assertEquals("/ by zero", exception.getMessage());
     }
 
+    //Extra
     /**
      * This test, tests a protected method.
      */
