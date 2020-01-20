@@ -19,11 +19,20 @@ public class App
         valueA = 10;
         valueB = 20;
 
-        System.out.println("Sum " + valueA + " + " + valueB + " = " + calculator.sum(valueA,valueB));
+        System.out.println("Sum: " + valueA + " + " + valueB + " = " + calculator.sum(valueA,valueB));
+        System.out.println();
 
         valueA = 30;
         valueB = 10;
 
-        System.out.println("Subtract " + valueA + " - " + valueB + " = " + calculator.subtract(valueA,valueB));
+        System.out.println("Subtract: " + valueA + " - " + valueB + " = " + calculator.subtract(valueA,valueB));
+
+        System.out.println();
+
+        System.out.println("Divide: " + valueA + " / " + valueB + " = " + calculator.division(valueA,valueB));
+
+        System.out.println();
+
+        System.out.println("Multiply: " + valueA + " * " + valueB + " = " + calculator.multiplikation(valueA,valueB));
     }
 }
