@@ -42,4 +42,9 @@ class CalculatorTest {
     void testSubtractOneNegativeAndOnePositiveNumberPass() {
         assertEquals(30,calculator.subtract(20,-10));
     }
+
+    @Test
+    void testSubtractTwoNegativeNumbersPass() {
+        assertEquals(-20, calculator.subtract(-30,-10));
+    }
 }
