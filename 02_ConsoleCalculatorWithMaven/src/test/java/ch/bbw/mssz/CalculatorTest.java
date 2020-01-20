@@ -3,6 +3,8 @@ package ch.bbw.mssz;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.lang.management.MonitorInfo;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -73,6 +75,36 @@ class CalculatorTest {
     @Test
     void testSubtractOneNegativeAndOnePositiveNumberPass() {
         assertEquals(30,calculator.subtract(20,-10));
+    }
+
+    @Test
+    void testSubtractOnePositiveNumberAndZeroPass() {
+        assertEquals(30,calculator.subtract(30,0));
+    }
+
+    @Test
+    void testSubtractMaxValueAndMinValuePass(){
+        assertEquals(-1,calculator.subtract(Integer.MAX_VALUE,Integer.MIN_VALUE));
+    }
+
+    @Test
+    void testSubtractMaxValueAndPositiveNumberPass() {
+        assertEquals(2147483629,calculator.subtract(Integer.MAX_VALUE,18));
+    }
+
+    @Test
+    void testSubtractMaxValueAndNegativeNumberPass() {
+        assertEquals(-2147483631,calculator.subtract(Integer.MAX_VALUE,-18));
+    }
+
+    @Test
+    void testSubtractMinValueAndPositiveNumberPass() {
+        assertEquals(2147483630,calculator.subtract(Integer.MIN_VALUE,18));
+    }
+
+    @Test
+    void testSubtractMinValueAndNegativeNumberPass() {
+        assertEquals(-2147483630,calculator.subtract(Integer.MIN_VALUE,-18));
     }
 
     @Test
