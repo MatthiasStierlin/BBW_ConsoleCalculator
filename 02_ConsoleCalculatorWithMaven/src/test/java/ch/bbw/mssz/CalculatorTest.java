@@ -19,12 +19,32 @@ class CalculatorTest {
     }
 
     @Test
-    void sumAssertion() {
+    void testSumTwoPositiveNumbersPass() {
         assertEquals(30,calculator.sum(10,20));
     }
 
     @Test
-    void subtractAssertion() {
+    void testSumOneNegativeAndOnePositiveNumberPass() {
+        assertEquals(20,calculator.sum(30,-10));
+    }
+
+    @Test
+    void testSumTwoNegativeNumbersPass() {
+        assertEquals(-30,calculator.sum(-10,-20));
+    }
+
+    @Test
+    void testSubtractTwoPositiveNumbersPass() {
         assertEquals(20,calculator.subtract(30,10));
+    }
+
+    @Test
+    void testSubtractOneNegativeAndOnePositiveNumberPass() {
+        assertEquals(30,calculator.subtract(20,-10));
+    }
+
+    @Test
+    void testSubtractTwoNegativeNumbersPass() {
+        assertEquals(-20, calculator.subtract(-30,-10));
     }
 }
